@@ -6,7 +6,7 @@ vector<string> split_string(string);
 
 int profit(int b, int s, int c) 
 {
-   
+   return b + s - c;
 }
 
 int main()
@@ -17,7 +17,8 @@ int main()
     cin >> t;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    for (int t_itr = 0; t_itr < t; t_itr++) {
+    for (int t_itr = 0; t_itr < t; t_itr++) 
+	{
         string bsc_temp;
         getline(cin, bsc_temp);
 
