@@ -5,7 +5,7 @@ import os
 
 
 def profit(b, s, c):
-    # Return the fixed profit.
+	return b + s - c
 
 	
 if __name__ == '__main__':
