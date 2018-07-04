@@ -4,10 +4,9 @@ using namespace std;
 
 vector<string> split_string(string);
 
-
-int profit(int b, int s, int c) {
-    // Return the fixed profit.
-
+int profit(int b, int s, int c) 
+{
+   
 }
 
 int main()
@@ -38,14 +37,17 @@ int main()
     return 0;
 }
 
-vector<string> split_string(string input_string) {
-    string::iterator new_end = unique(input_string.begin(), input_string.end(), [] (const char &x, const char &y) {
+vector<string> split_string(string input_string) 
+{
+    string::iterator new_end = unique(input_string.begin(), input_string.end(), [] (const char &x, const char &y) 
+    {
         return x == y and x == ' ';
     });
 
     input_string.erase(new_end, input_string.end());
 
-    while (input_string[input_string.length() - 1] == ' ') {
+    while (input_string[input_string.length() - 1] == ' ') 
+    {
         input_string.pop_back();
     }
 
@@ -58,7 +60,6 @@ vector<string> split_string(string input_string) {
     while (pos != string::npos) 
     {
         splits.push_back(input_string.substr(i, pos - i));
-
         i = pos + 1;
         pos = input_string.find(delimiter, i);
     }
